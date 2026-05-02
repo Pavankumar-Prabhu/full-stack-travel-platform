@@ -10,5 +10,10 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if (location.hostname.endsWith("github.io") && !location.pathname.endsWith("/docs/")) {
+        location.replace(new URL("./docs/", location.href));
+      }
+    </script>
   </body>
 </html>
